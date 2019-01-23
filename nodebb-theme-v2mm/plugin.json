@@ -1,0 +1,75 @@
+{
+	"id": "nodebb-theme-v2mm",
+	"library": "./lib/theme.js",
+	"hooks": [
+		{
+			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
+		},
+		{
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "static:app.preload", "method": "preinit"
+		},
+		{
+			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
+		},
+		{
+			"hook": "filter:config.get", "method": "getConfig"
+		},
+		{
+			"hook": "filter:controllers.topic.get", "method": "filterTopic"
+		},
+		{
+			"hook": "filter:topic.create", "method": "setExternalLinkOnSaveTopic"
+		},
+		{
+			"hook": "action:topic.move", "method": "moveTopicFromRootCategory"
+		},
+		{
+			"hook": "filter:topic.edit", "method": "setExternalLinkOnSaveTopic"
+		},
+		{
+			"hook": "action:topic.save", "method": "saveTopicToRootCategory"
+		},
+		{
+			"hook": "action:topic.purge", "method": "onPurgeTopic"
+		},
+		{
+			"hook": "filter:category.topics.get", "method": "filterCategoryTopics"
+		},
+		{
+			"hook": "filter:category.get", "method": "filterCategoryGet"
+		},
+		{
+			"hook": "filter:topics.get", "method": "filterTopics"
+		},
+		{
+			"hook": "filter:user.account.edit", "method": "getEditUserProfile"
+		},
+		{
+			"hook": "filter:user.account", "method": "getUserAccount"
+		},
+		{
+			"hook": "filter:user.updateProfile", "method": "editUserProfile"
+		}
+	],
+	"staticDirs": {
+		"vendor": "static/vendor",
+		"css": "public/css",
+		"lib": "public/lib"
+	},
+	"scripts": [
+		"static/lib/lavender.js",
+		"static/lib/infinitescroll.js",
+		"static/lib/categoryTagsTools.js",
+		"static/lib/topicLabels.js",
+		"static/vendor/masonry.js",
+		"static/vendor/imagesLoaded.js"
+	],
+	"acpScripts": [
+		"static/lib/admin.js"
+	],
+	"languages": "languages",
+	"defaultLang": "zh_CN"
+}

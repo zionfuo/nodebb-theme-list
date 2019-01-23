@@ -1,0 +1,125 @@
+.users {
+
+	&.admin {
+		#users-container {
+			padding: 0;
+		}
+
+		.users-box {
+			display: inline-block;
+			margin-top: 20px;
+			text-align: center;
+			vertical-align: top;
+			.text-ellipsis;
+			height: auto;
+			max-width: 125px;
+
+			img {
+				width: 80px;
+				height: 80px;
+			}
+
+			a {
+				margin-bottom:5px;
+			}
+		}
+	}
+
+	.status {
+		position: absolute;
+		top: 13px;
+		right: 30px;
+	}
+
+	.nav-pills {
+		> li {
+			margin-left: 0;
+			border: 1px solid rgba(0,0,0, .1);
+			border-left: 0;
+			.transition(all .1s linear);
+			overflow: hidden;
+
+			&.active > a {
+				.border-radius(0);
+				color: #fff;
+			}
+
+			> a {
+				padding: 10px;
+				font-weight: 500;
+				font-size: 13px;
+				color: @link-color;
+				.border-radius(0 ~'!important');
+			}
+	
+			&:first-child {
+				border-left: 1px solid rgba(0,0,0, .1);
+				.border-radius(5px 0 0 5px);
+			}
+
+			&:last-child {
+				.border-radius(0 5px 5px 0);
+			}
+		}
+	}
+}
+
+.users-container {
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+
+	li {
+		padding-bottom: 10px;
+	}
+
+	.users-box {
+		display: inline-block;
+		margin-top: 35px;
+		padding-bottom: 0;
+		position: relative;
+		text-align: center;
+		vertical-align: top;
+		width: 138px;
+
+		img,
+		.user-icon {
+			.user-icon-style(80px, 40px, 50%);
+			box-shadow: 0 8px 16px rgba(0,0,0, .1);
+		}
+
+		a {
+			max-width: 94px;
+			.text-ellipsis;
+			font-weight: 500;
+		}
+	}
+
+	.user-info {
+		margin-top: 15px;
+
+		> span {
+			max-width: 94px;
+			.text-ellipsis;
+			display: inline-block;
+		}
+
+		.joindate,
+		.reputation,
+		.post-count {
+			color: @link-color;
+			font-size: @font-size-small;
+		}
+	}
+
+	.user-img {
+		.user-icon-style(20px, 1rem, 50%);
+		vertical-align: middle;
+	}
+
+	.anon-user .user-icon {
+		background: @gray-lighter;
+		color: #fff;
+		text-shadow: 0 1px 3px rgba(0,0,0, .05);
+	}
+}

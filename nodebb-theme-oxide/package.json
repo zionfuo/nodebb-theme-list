@@ -1,0 +1,37 @@
+{
+	"name": "nodebb-theme-oxide",
+	"description": "A theme that is based on the GitHub design.",
+	"version": "3.0.28",
+	"homepage": "https://github.com/youhosi/nodebb-theme-oxide",
+	"license": "MIT",
+	"main": "theme.less",
+	"contributors": [
+		{
+			"name": "Sebastian Sycz",
+			"email": "sebastiansycz99@icloud.com",
+			"url": "https://github.com/youhosi"
+		}
+	],
+	"keywords": [
+		"nodebb",
+		"theme",
+		"forum",
+		"bootstrap",
+		"responsive",
+		"oxide"
+	],
+	"nbbpm": {
+		"compatibility": "^1.11.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/youhosi/nodebb-theme-oxide.git"
+	},
+	"bugs": {
+		"url": "https://github.com/youhosi/nodebb-theme-oxide/issues"
+	},
+	"dependencies": {
+		"pulling": "^2.0.0",
+		"striptags": "^3.1.1"
+	}
+}

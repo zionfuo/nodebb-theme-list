@@ -1,0 +1,21 @@
+{
+    "upvote": "Upvote",
+    "downvote": "Downvote",
+    "new_topic_button": "New topic",
+    "no_description": "No description",
+    "no-externalLink": "No official URL",
+    "no-externalAuthorName": "No author name",
+    "no-externalAuthorLink": "No author link",
+    "loading_more_posts": "Loading more",
+    "url-not-right": "URL is not right",
+    "reply": "Write a comment",
+    "description_length_check": "There must be a description with at least 42 characters.",
+
+    "error.privilege.label.create": "No privilege to create label",
+    "invalid-label-name": "invalid label name",
+    "label_tools.removeSuccess": "Remove label success",
+    "label_tools.addSuccess": "Add label success",
+    "label_tools.title": "Labels",
+    "label_tools.removeAllLabels": "Remove all labels",
+    "external_url_placeholder": "Enter the original topic url (optional)"
+}

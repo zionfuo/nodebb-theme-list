@@ -1,0 +1,339 @@
+@import "variables";
+@import "whiteplum";
+@import "keyframes";
+
+@import "categories";
+@import "category";
+@import "topic";
+@import "register";
+@import "account";
+@import "groups";
+@import "chats";
+
+body {
+	background:#FAFAFA;
+}
+
+.loading-bar {
+ 	width: 0%;
+ 	position: absolute;
+ 	left: 0px;
+ 	height: 2px;
+ 	background: @brand-primary;
+ 	z-index: 1;
+
+ 	-webkit-transition: width 0.2s ease-in;
+ 	-moz-transition: width 0.2s ease-in;
+ 	-o-transition: width 0.2s ease-in;
+ 	-ms-transition: width 0.2s ease-in;
+ 	transition: width 0.2s ease-in;
+}
+
+.v2mm-loading-spin {
+	background-color: gray;
+	.fa {
+		color: #CDDC39;
+	}
+}
+
+.tag-header-wrapper {
+	background-color: white;
+	margin-bottom: 1px;
+}
+
+.admin {
+	background: white;
+
+	.panel[data-widget] {
+		border-top: 0;
+		box-shadow: 0px 0px 1px #555;
+	}
+}
+
+.header {
+	#user_label {
+		>a {
+			padding-top:8px;
+			padding-bottom:8px;
+		}
+
+		img, .user-icon {
+			width:34px;
+			height:34px;
+			border-radius: 50%;
+		}
+	}
+
+	#notif-list, #chat-list {
+		li {
+			&.unread {
+				background-color: @brand-warning;
+			}
+		}
+	}
+
+	.navbar-header {
+		.navbar-brand {
+			color: black;
+			font-weight: bolder;
+			font-size: 34px;
+		}
+	}
+
+	.categories-tree.dropdown-menu {
+		padding: 50px 20px;
+		width: 800px;
+		overflow: hidden;
+
+		.dropdown-item {
+			margin-bottom: 15px;
+			font-size: 16px;
+		}
+		span.category-root {
+		    display: table-cell;
+		    width: 100px;
+		    text-align: right;
+
+		    a {
+		    	color: #a2a2a2;
+		    	// color: @gray-lighter;
+		    	margin-right: 5px;
+		    	&:hover {
+		    		color: #555;
+		    	}
+		    }
+		}
+		span.category-children {
+		    font-weight: 800;
+		    display: table-cell;
+
+		    a {
+		    	margin-left: 10px;
+		    	white-space: nowrap;
+		    	color: @gray-dark;
+
+		    	&:hover {
+		    		color: @gray-darker;
+		    	}
+		    }
+		}
+	}
+}
+
+.chats-list {
+	li {
+		&.unread {
+			background-color: @brand-warning;
+		}
+	}
+}
+
+.header-topic-title {
+	padding-top:5px;
+	span {
+		height:25px;
+	}
+}
+
+.breadcrumb {
+	background-color: white;
+	.need-share-button {
+		position: absolute;
+		margin-left: 5px;
+	}
+}
+
+.account {
+	.user-profile-picture {
+		border-radius: 50%;
+	}
+}
+
+.taskbar {
+	li > a {
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+}
+
+.composer {
+	.instructions {
+		line-height: 25px;
+
+	}
+}
+
+.postMenu, .upvote.btn-primary, .downvote.btn-primary {
+	background: transparent;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	display: inline-block;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.facebook-share, .twitter-share, .google-share {
+	background: transparent;
+}
+
+.facebook-share .menu-icon {
+	background: #3b5998;
+}
+
+.twitter-share .menu-icon {
+	background: #2fc2ef;
+}
+
+.google-share .menu-icon {
+	background: #df5138;
+}
+
+.facebook-share .menu-icon, .twitter-share .menu-icon, .google-share .menu-icon {
+	color:white;
+	border-radius: 100%;
+}
+
+div[widget-area="sidebar"] .recent-replies ul li {
+	padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e9e9e9;
+
+	p {
+		line-height: 1.4em;
+		margin-bottom: 0;
+	}
+
+	.post-preview-footer {
+		visibility: hidden;
+		height: 0;
+		margin-top: 0;
+	}
+}
+
+.post-preview-footer {
+	opacity: 0.8;
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.user-icon {
+	border-radius: 50% !important;
+}
+
+.topic-label {
+	display: inline-block;
+    // line-height: initial;
+    border-radius: 0.25em;
+}
+
+.ajaxifying-effect {
+	z-index: 1000;
+	.fish {
+		position: fixed;
+		top: 100px;
+		width: 100px;
+	  	height: 100px;
+	  	animation: swim 3s infinite;
+	}
+
+	/* Bubbles */
+	.bubbles {
+	  position: fixed;
+	  bottom: 0;
+	  margin-right: 50px;
+	  background-color: white;
+	  border-radius: 50%;
+	  opacity: .50;
+	  width: 40px;
+	  height: 40px;
+	  animation: up 4s infinite;
+	}
+
+	.bubble-1 {
+	  left: 10px;
+	  animation: up 7s infinite;
+	}
+
+	.bubble-2 {
+	  left: 350px;
+	  animation: up 2s infinite;
+	}
+
+	.bubble-3 {
+	  left: 750px;
+	  opacity: .30;
+	  animation: up 5s infinite;
+	}
+
+	.bubble-4 {
+	  left: 1150px;
+	  animation: up 6s infinite;
+	}
+
+	.bubble-5 {
+	  left: 50px;
+	  animation: up 5s infinite;
+	}
+
+	.bubble-6 {
+	  left: 300px;
+	  opacity: .30;
+	  animation: up 3s infinite;
+	}
+
+	.bubble-7 {
+	  left: 670px;
+	  animation: up 4s infinite;
+	}
+
+	.bubble-8 {
+	  left: 1050px;
+	  opacity: .30;
+	  animation: up 3s infinite;
+	}
+
+	.bubble-9 {
+	  left: 1650px;
+	  opacity: .30;
+	  animation: up 8s infinite;
+	}
+
+	.bubble-10 {
+	  left: 2050px;
+	  opacity: .30;
+	  animation: up 6s infinite;
+	}
+
+	.bubble-11 {
+	  left: 2550px;
+	  opacity: .30;
+	  animation: up 5s infinite;
+	}
+
+	/* Swim Animation */
+	@keyframes swim {
+	  0% {
+	    transform: translateY(-50px) translateX(0) rotate(30deg);
+	  }
+	  25% {
+	    transform: translateY(50px) translateX(250px) rotate(20deg);
+	  }
+	  50% {
+	    transform: translateY(100px) translateX(500px);
+	  }
+	  75% {
+	    transform: translateY(50px) translateX(850px) rotate(-20deg);
+	  }
+	  100% {
+	    transform: translateY(-170px) translateX(1200px) rotate(-40deg);
+	  }
+	}
+
+	/* Bubbles Animation */
+	@keyframes up {
+	  100% {
+	    transform: translateY(-1100px);
+	  }
+	}
+}
