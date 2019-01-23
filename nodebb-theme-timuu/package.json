@@ -1,0 +1,30 @@
+{
+  "name": "nodebb-theme-timuu",
+  "version": "0.2.5",
+   "nbbpm": {
+    "compatibility": "^1.10.0"
+  },
+  "description": "Timuu's NodeBB theme",
+  "main": "theme.less",
+  "keywords": [],
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Ahmet Buğra Avcılar",
+      "email": ": abavcilar@gmail.com",
+      "url": "http://www.ahmetbugra.com"
+    },
+    {
+      "name": "Yasin Arıbuğa",
+      "email": "yasin.aribuga@gmail.com",
+      "url": "https://twenycrows.tumblr.com/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timuu/nodebb-theme-timuu"
+  },
+  "bugs": {
+    "url": "https://github.com/timuu/nodebb-theme-timuu/issues"
+  }
+}
